@@ -1,0 +1,87 @@
+body,
+p,
+a,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1 {
+  color: #d9caa3;
+  text-transform: uppercase;
+  font-family: "M PLUS 1 Code", sans-serif;
+}
+
+body {
+  background-color: #db9202;
+  overflow-x: hidden;
+}
+
+button {
+  background: none;
+  border: 7px solid #d9caa3;
+  color: #d9caa3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  display: inline-block;
+}
+button:hover {
+  color: #af6a1b;
+  background: #f9cf6d;
+}
+
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 50px;
+  margin: 1.7px;
+  border-radius: 20px;
+  border: 3px solid #ab4200d6;
+  color: #d9caa3;
+}
+
+#searchInput {
+  display: none;
+}
+
+.books #searchMe {
+  color: blue;
+  float: right;
+  grid-row: 3;
+}
+
+#genre {
+  display: none;
+}
+
+#bookShelf {
+  display: none;
+}
+
+#uploadInput {
+  display: none;
+}
+
+#searchInput.active {
+  display: block;
+}
+
+#genre.active {
+  display: block;
+}
+
+#bookShelf.active {
+  display: block;
+}
+
+#uploadInput.active {
+  display: block;
+}

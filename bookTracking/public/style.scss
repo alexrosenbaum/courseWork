@@ -1,0 +1,114 @@
+$primary: #d9caa3;
+$secondary: #db9202;
+$third:#f9cf6d;
+$titleFont: 'M PLUS 1 Code',
+sans-serif;
+
+
+
+body,
+p,
+a,
+ul,
+li {
+
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+h1 {
+    color: $primary;
+    text-transform: uppercase;
+    font-family: $titleFont;
+}
+
+body {
+    background-color: $secondary;
+    overflow-x: hidden;
+}
+
+button {
+    background: none;
+    border: 7px solid $primary;
+    color: $primary;
+    padding: 6px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 3px rgb(0 0 0 /0.6);
+    display: inline-block;
+
+    &:hover {
+        color: rgb(175, 106, 27);
+        background: $third;
+    }
+}
+
+input,
+textarea {
+    background: rgb(255 255 255/0.05);
+    padding: 4px 50px;
+    margin: 1.7px;
+    border-radius: 20px;
+    border: 3px solid #ab4200d6;
+    color: $primary;
+}
+
+// .submit::before {
+//     content: "";
+// }
+
+#searchInput {
+    display: none;
+}
+
+.books {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+
+    & #searchMe {
+        color: blue;
+        float: right;
+        grid-row: 3;
+    }
+}
+
+#genre {
+    display: none;
+}
+
+#bookShelf {
+    display: none;
+}
+
+#uploadInput {
+    display: none;
+}
+
+#searchInput.active {
+    display: block;
+}
+
+#genre.active {
+    display: block;
+}
+
+#bookShelf.active {
+    display: block;
+}
+
+#uploadInput.active {
+    display: block;
+}
+
+@media screen and (min-width: 620px) {}
+
+@media screen and (min-width: 960px) {}
+
+@media screen and (min-width: 1200px) {}

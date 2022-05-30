@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@700&family=Roboto+Mono:wght@200&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.js"
+        integrity="sha512-MNW6IbpNuZZ2VH9ngFhzh6cUt8L/0rSVa60F8L22K1H72ro4Ki3M/816eSDLnhICu7vwH/+/yb8oB3BtBLhMsA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Book Shelf</title>
+</head>
+
+<body>
+    <div class="books">
+        <button id="user"> user</button>
+        <button class="sub searchBtn">search</button>
+
+
+        <div id="searchInput" class="books__searchBar--search">
+            <input type="search" onchange="handleGetSearch(event)" name="search" placeholder="search books" />
+        </div>
+        <div id='searchMe'></div>
+
+        <div class="books__nav">
+            <div class="books__nav--header">
+
+                <h1>book tracker</h1>
+
+            </div>
+            <div class="books__nav--collapsible">
+                <!-- <ul id="list"> -->
+
+                <button class="sub bookShelfBtn"> bookShelf</button>
+                <select name="bookShelf" id="bookShelf">
+                    <option type="text" name="bookShelf" value="" placeholder="bookShelf" required disabled selected
+                        hidden value="1">
+                        bookShelf</option>
+                    <option type="text" name="horror" value="horror">horror</option>
+                    <option type="text" name="biography" value="biography">biography</option>
+                    <option type="input" name="add shelf" value="add shelf">add shelf</option>
+                </select>
+                <button class="sub genreBtn"> genre</button>
+
+                <select onchange="handleGetGenre(event)" name="genre" id="genre">
+                    <option type="text" name="genre" value="" placeholder="genre" required disabled selected hidden>
+                        genre</option>
+                    <option type="text" name="fiction" value="fiction">fiction</option>
+                    <option type="text" name="non-fiction" value="non-fiction">non-fiction</option>
+                    <option type="text" name="fantasy" value="fantasy">fantasy</option>
+                    <option type="text" name="horror" value="horror">horror</option>
+                    <option type="text" name="biography" value="biography">biography</option>
+                    <option type="text" name="poetry" value="poetry">poetry</option>
+                </select>
+                <button class="sub uploadBtn"> upload</button>
+                <div id="uploadInput" class="content books--upload">
+                    <form onsubmit="handleUpload(event)">
+                        <input type="text" name="title" placeholder="title" required />
+                        <input type="text" name="author" placeholder="author" required />
+                        <input type="text" name="date" placeholder="date published" required />
+
+                        <select name="genre" id="genre">
+                            <option type="text" name="genre" value="" placeholder="genre" required disabled selected
+                                submit.forEach(btn=> {
+                                btn.addEventListener('click', e => {
+                                if (btn.classList.contains('searchBtn')) {
+                                searchButton.classList.toggle("active")
+                                } else if (btn.classList.contains('genreBtn')) {
+                                genreButton.classList.toggle("active")
+                                } else if (btn.classList.contains('bookShelfBtn')) {
+                                bookShelfButton.classList.toggle('active')
+                                } else if (btn.classList.contains('uploadBtn')) {
+                                uploadInputButton.classList.toggle('active')
+                                }
+                                console.log(e)
+                                })
+                                }) hidden>
+                                genre</option>
+                            <option type="text" name="fiction" value="fiction">fiction</option>
+                            <option type="text" name="non-fiction" value="non-fiction">non-fiction</option>
+                            <option type="text" name="fantasy" value="fantasy">fantasy</option>
+                            <option type="text" name="horror" value="horror">horror</option>
+                            <option type="text" name="biography" value="biography">biography</option>
+                            <option type="text" name="poetry" value="poetry">poetry</option>
+                        </select>
+
+                        <input type="text" name="description" placeholder="description" maxlength="220" required />
+                        <input type="number" name="duration" placeholder="number of pages" required />
+                        <input type="number" name="page" placeholder="on page" required />
+                        <!-- <input type="file" name="file" > -->
+                        </select>
+
+                        <input type="submit" class="uploadButton" value="upload" />
+
+                    </form>
+
+
+                </div>
+                <!-- </ul> -->
+
+            </div>
+        </div>
+
+
+
+
+        <div class="books__searchBar">
+            <div class="books__searchBar--nav">
+
+            </div>
+
+            <div id="renderUpload" class="books__main">
+            </div>
+
+
+        </div>
+    </div>
+    <script src="./dist/index.js"></script>
+
+</body>
+
+</html>
