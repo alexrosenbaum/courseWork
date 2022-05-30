@@ -1,0 +1,2 @@
+A moduler note taking application. that allows the user to have freedom while writing notes, in an endless space of 
+blocks that go into blocks and float around. with a tag directory system to navigate notes and arrange them on a canvas. 

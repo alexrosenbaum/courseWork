@@ -1,0 +1,13 @@
+.form {
+    display: grid;
+
+
+    &-input {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    button {
+      grid-column: 3 /span 2;  
+    }
+}
